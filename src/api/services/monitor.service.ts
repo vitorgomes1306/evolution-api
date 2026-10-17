@@ -259,6 +259,7 @@ export class WAMonitoringService {
       });
     } catch (error) {
       this.logger.error(error);
+      throw error;
     }
   }
 
