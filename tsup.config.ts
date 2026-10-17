@@ -14,13 +14,13 @@ const licenseEndpointEncoded = JSON.stringify(process.env.LICENSE_ENDPOINT_ENCOD
 const licenseEndpointXorKey = JSON.stringify(process.env.LICENSE_ENDPOINT_XOR_KEY ?? '');
 
 export default defineConfig({
-  entry: ['src'],
+  entry: ['src/main.ts'],
   outDir: 'dist',
   splitting: false,
   sourcemap: true,
   clean: true,
   minify: true,
-  format: ['cjs', 'esm'],
+  format: ['cjs'],
   // shims: injeta o shim de import.meta.url no bundle CJS (necessário p/ o client Prisma 7)
   shims: true,
   // Apenas o nome exato @prisma/client é bundlado (redirecionado pelo alias para o client
